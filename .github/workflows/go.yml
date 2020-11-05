@@ -29,9 +29,6 @@ jobs:
             dep ensure
         fi
     - name: System tests BioDynaMo
-       shell: bash
-       working-directory: build
-       run: |
          set -x
 
     - name: Build
