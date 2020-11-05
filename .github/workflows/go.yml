@@ -28,9 +28,14 @@ jobs:
             curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
             dep ensure
         fi
+    - name: System tests BioDynaMo
+       shell: bash
+       working-directory: build
+       run: |
+         set -x
 
     - name: Build
-      run: go build version.
+      run: go build -v.
 
     - name: Test
       run: go test -v .
